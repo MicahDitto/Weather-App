@@ -1,0 +1,171 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,200);
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+body {
+  /* background-color: lightblue; */
+  color: #fff;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+h1 {
+  /* color:navy; */
+  margin-left: 20px;
+}
+p,
+h1,
+label,
+button,
+input,
+table {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+h2 {
+  /* color: maroon; */
+  margin-left: 20px;
+}
+#city-box {
+  background: transparent;
+}
+
+/* $min-height:570px; */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background: url(https://andreacorda.files.wordpress.com/2015/07/skyline.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.top {
+  top: 0;
+  position: absolute;
+  width: 100%;
+}
+
+#clouds {
+  background: url(http://pngimg.com/upload/cloud_PNG24.png);
+  background-size: 100% 300px;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  z-index: 5;
+  animation: moveClouds 30s infinite linear;
+  transform: translateX(-100%);
+}
+
+#clouds2 {
+  background: url(http://pngimg.com/upload/cloud_PNG24.png);
+  background-size: 100% 300px;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 150px;
+  z-index: 5;
+  animation: 30s linear 10s infinite moveClouds;
+  transform: translateX(-100%);
+}
+
+@keyframes moveClouds {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#weather {
+  z-index: 10;
+  width: 75%;
+  height: 80%;
+  min-width: 600px;
+  min-height: 570px;
+  margin: 5% auto;
+  position: relative;
+}
+
+.panelLeft,
+.panelRight {
+  /* width: 50%;
+  height: 100%; */
+  /* min-height: 570px; */
+  /* display: inline-block; */
+  box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
+  position: relative;
+}
+
+.panelLeft {
+  background: linear-gradient(
+    to right,
+    hsla(195, 100%, 20%, 0.6),
+    hsla(300, 100%, 40%, 0.4)
+  );
+  background-blend-mode: overlay;
+}
+
+/* img {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  top: calc(50% - 200px);
+  left: -50px;
+} */
+
+.top p {
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgba(white, 0.6);
+  text-align: right;
+  width: 100%;
+  right: 0;
+  padding-right: 10px;
+}
+
+.bottom .temp {
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+
+.bottom .temp p {
+  font-family: "Varela Round", sans-serif;
+  color: rgba(white, 0.8);
+}
+hr {
+  background: rgba(white, 0.4);
+  height: 1px;
+  border: transparent;
+}
+.customHeight {
+  height: 35%;
+  min-height: 200px;
+  width: 100%;
+  background: rgba(50, 170, 250, 0.9);
+  color: rgba(white, 0.7);
+}
+.panelRight {
+  float: right;
+}
+.remainingHeight {
+  height: 65%;
+  min-height: 370px;
+  background: rgba(white, 0.9);
+}

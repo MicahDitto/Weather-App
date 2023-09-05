@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equi="X-UA-Compatable" content="ie=edge">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+
+  <title>City Info</title>
+</head>
+
+<body>
+
+  <div id="weather">
+    <div class="container">
+      <div class="row">
+        <div class="container">
+          <div class="col-6-lg">
+
+            <h1 STYLE="text-transform:capitalize" id="cityHeader">City Info:</h1>
+            <p>Enter a city to acquire information on Weather, Location, and Transit Options:</p><br>
+            <input placeholder="Enter city here..." type="text" class="input-lg" id="city-box"></input><br>
+            
+            <p class="text-danger" id="errorMsg"></p>
+            <button class="btn-primary" id="cityButton" onclick="displayCityData();">Display City Data</button>
+            <!-- <p style="font-size:12px;">(Please refresh the page before entering a new city.) </p> -->
+            <h2>Weather-</h2>
+            <p id="weatherIntroMsg"> </p>
+
+            <!-- <div class="top">
+              <p>MARCH 14, 2016</p>
+            </div>
+            <img src="http://img13.deviantart.net/b5ed/i/2013/033/d/0/cloud_fog_by_moonglowlillay-d5tk3l7.png" alt="" />
+            <div class="bottom">
+              <div class="temp">
+                <p>24°</p>
+                <p>New York</p>
+              </div>
+            </div>
+          </div> -->
+
+
+          </div>
+        </div>
+        <div class="col-6-lg">
+          <table class="table" style="border:solid;">
+            <tr style="background-color: #7cbde9">
+              <th>Weather: </th>
+              <th>Description: </th>
+              <th>Temperature: </th>
+              <th>Wind: </th>
+            </tr>
+
+            <tr>
+              <td id="weatherData"> <img class="icon"></td>
+              <td id="weatherDescription"></td>
+              <td id="tempData"> </td>
+              <td id="windData"></td>
+            </tr>
+          </table>
+
+          <h2>Location-</h2>
+          <input type="radio" name="lonlat" value="lon" onclick="displayLon();"> Display Longitude: </input>
+          <label id="lonDesc"> </label><br>
+          <input type="radio" name="lonlat" value="lat" onclick="displayLat();"> Display Latitude: </input>
+          <label id="latDesc"> </label><br>
+          <h2>Transit Info-</h2>
+          <input type="checkbox" id="transitButton" value="transit" onclick="displayTransitData();">Display Transit
+          Data</button>
+          <br>
+          <select id="stopList" onchange="itemsSelected();"></select>
+          <p id="stopDesc"></p>
+        </div>
+      
+
+      </div>
+    </div>
+
+
+
+
+    <!-- 
+    <h2>Transit Info-</h2>
+    <input type="checkbox" id="transitButton" value="transit" onclick="displayTransitData();">Display Transit Data</button>
+    <br>
+    <select id="stopList" onchange="itemsSelected();"></select>
+    <p id="stopDesc"></p> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="Geocoding.js" defer></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+<!-- 
+
+ -->
